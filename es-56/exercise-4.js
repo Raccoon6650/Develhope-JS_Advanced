@@ -1,11 +1,10 @@
 function uncompletedNotes(array) {
-  /*let newArray = [];
-  array.forEach(() => newArray.push(Object.values(array.id)))
-
-  console.log(newArray);*/
- array.forEach(element => {
-  (console.log(Object.values(array)));
-  });
+  function checkDone(){
+  if (array.todos.done === false){newArray.push(array.todos)}
+  }
+  let newArray = [];
+  array.forEach(array => array.todos.filter(checkDone));
+  return newArray
 }
 
 const notes = [
